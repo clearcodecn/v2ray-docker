@@ -1,5 +1,6 @@
 FROM golang:latest as builder1
 RUN mkdir /app
+WORKDIR /app
 COPY . .
 RUN go build -o app main.go
 
