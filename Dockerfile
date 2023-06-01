@@ -18,5 +18,8 @@ RUN mkdir /v2ray
 WORKDIR /v2ray
 COPY --from=builder2 /v2ray/ .
 COPY --from=builder1 /app/app .
+COPY --from=builder1 /app/start.sh .
+COPY --from=builder1 /app/config.json .
+RUN chmod +x start.sh
 
 CMD ["./start.sh"]
