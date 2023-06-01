@@ -13,6 +13,6 @@ FROM ubuntu
 RUN mkdir /v2ray
 WORKDIR /v2ray
 COPY --from=builder2 /v2ray/ .
-COPY --from=builder /app/app .
+COPY --from=builder1 /app/app .
 
 CMD ["./start.sh"]
