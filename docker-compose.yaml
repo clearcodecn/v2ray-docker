@@ -1,0 +1,12 @@
+version: '2'
+services:
+  web:
+    image: registry.ap-northeast-1.aliyuncs.com/mrjnamei/one:v2ray_42_8
+    ports:
+      - "9002:9002"
+    command:
+      - ./start.sh
+    environment:
+      - "UUID=a8201ce8-0eca-4ad7-a4fc-763fb97cdddc"
+    volumes:
+      - ./config.json:/v2ray/config.json
